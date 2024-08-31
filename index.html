@@ -99,7 +99,12 @@ body {
   background: none;
   border-radius: 10px;
 }
-
+.transit{
+  position: relative;
+  color: #455083;
+  font-size: 2vw;
+  -webkit-text-stroke: 0.01vw #08ea84;
+}
 @media (max-width: 700px) {
   .contain-item:nth-of-type(2) {
     display: none;
@@ -135,9 +140,68 @@ body {
   .showbar-2 {
     display: block;
   }
+  
 }
 
+.animated-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
 
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "Youtuber";
+    color: #ff7f50;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #2795ea;
+    border-left: 2px solid #50ffe5;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f50;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Programmer";
+    }
+    21%,40%{
+        content: "DBA";
+    }
+    41%,60%{
+        content: "Developer";
+    }
+    61%,80%{
+        content: "Web Api Developer";
+    }
+    81%,100%{
+        content: "";
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
 </style>
 
 <!DOCTYPE html>
@@ -207,6 +271,9 @@ body {
                 </div>
                 <div class="item">
                     <h1>Hi Im <span style="color:red;">Yen</span> Kimloang</h1>
+                    <div class="animated-text">
+                      What I Do? <span></span>
+                  </div>
                 </div>
                 <div class="item">
                     <h2 class="repo">i'm Loang, professional web developer
@@ -216,6 +283,7 @@ body {
                         this field​
                     </h2>
                 </div>
+                
                 <div class="btn1"><button class="btn1" onclick="agreement()"><a href="yenkimloang_cv.pdf"
                             download="">Download
                             my
