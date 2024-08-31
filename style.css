@@ -1,0 +1,132 @@
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 100%;
+}
+
+.menu {
+  display: flex;
+  width: 100%;
+  background: #666e90;
+  justify-content: space-evenly;
+  font-size: 15px;
+  align-items: center;
+  background-size: 10%;
+}
+
+.showbar-2 {
+  display: none;
+}
+
+.menu ul,
+.showbar ul {
+  float: left;
+  color: white;
+}
+
+.menu ul,
+.showbar ul li {
+  float: left;
+  font-size: 20px;
+  padding: 10px;
+  list-style-type: none;
+}
+
+.showbar ul li:hover {
+  color: #ff4a57;
+}
+
+.layout {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  background: #455083;
+  height: 510px;
+  flex-wrap: wrap;
+}
+
+.contain-item:nth-of-type(2) {
+  width: 300px;
+  background: url("kimloang.jpg");
+  background-size: cover;
+  margin: 10pxz;
+}
+
+.contain-item:nth-of-type(1) {
+}
+
+.contain-item:nth-of-type(1) {
+  padding-top: 20px;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+}
+
+.item:nth-of-type(1) {
+}
+
+.item li {
+  margin-left: auto;
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px;
+  border: 2px solid #ff4a57;
+  margin-left: 15px;
+  border-radius: 50%;
+  color: white;
+}
+
+.item li:hover {
+  cursor: pointer;
+  background: red;
+}
+
+.btn1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn1 {
+  padding: 15px;
+  background: none;
+  border-radius: 10px;
+}
+
+@media (max-width: 700px) {
+  .contain-item:nth-of-type(2) {
+    display: none;
+  }
+
+  .contain-item:nth-of-type(1) {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .item li {
+    flex-wrap: wrap;
+  }
+
+  .btn1 {
+    align-self: center;
+  }
+
+  .repo {
+    text-align: center;
+  }
+
+  .showbar {
+    display: none;
+  }
+
+  .menu {
+    justify-content: space-between;
+  }
+
+  .showbar-2 {
+    display: block;
+  }
+}
